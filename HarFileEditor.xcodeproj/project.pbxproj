@@ -12,6 +12,7 @@
 		044F6D542D56078D002B700E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 044F6D532D56078D002B700E /* Assets.xcassets */; };
 		044F6D572D56078D002B700E /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 044F6D562D56078D002B700E /* Base */; };
 		044F6D592D56078D002B700E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 044F6D582D56078D002B700E /* main.m */; };
+		044F6D622D56F38C002B700E /* WindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 044F6D612D56F38C002B700E /* WindowController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		044F6D562D56078D002B700E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		044F6D582D56078D002B700E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		044F6D5A2D56078D002B700E /* HarFileEditor.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HarFileEditor.entitlements; sourceTree = "<group>"; };
+		044F6D602D56F38C002B700E /* WindowController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WindowController.h; sourceTree = "<group>"; };
+		044F6D612D56F38C002B700E /* WindowController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WindowController.m; sourceTree = "<group>"; };
+		044F6D632D56F771002B700E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,8 @@
 			children = (
 				044F6D4D2D56078C002B700E /* AppDelegate.h */,
 				044F6D4E2D56078C002B700E /* AppDelegate.m */,
+				044F6D602D56F38C002B700E /* WindowController.h */,
+				044F6D612D56F38C002B700E /* WindowController.m */,
 				044F6D502D56078C002B700E /* ViewController.h */,
 				044F6D512D56078C002B700E /* ViewController.m */,
 				044F6D532D56078D002B700E /* Assets.xcassets */,
@@ -104,11 +110,12 @@
 			};
 			buildConfigurationList = 044F6D452D56078C002B700E /* Build configuration list for PBXProject "HarFileEditor" */;
 			compatibilityVersion = "Xcode 14.0";
-			developmentRegion = en;
+			developmentRegion = "zh-Hans";
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 044F6D412D56078C002B700E;
 			productRefGroup = 044F6D4B2D56078C002B700E /* Products */;
@@ -138,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				044F6D522D56078C002B700E /* ViewController.m in Sources */,
+				044F6D622D56F38C002B700E /* WindowController.m in Sources */,
 				044F6D592D56078D002B700E /* main.m in Sources */,
 				044F6D4F2D56078C002B700E /* AppDelegate.m in Sources */,
 			);
@@ -150,6 +158,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				044F6D562D56078D002B700E /* Base */,
+				044F6D632D56F771002B700E /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -162,6 +171,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -210,7 +220,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -223,6 +233,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -265,7 +276,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -284,7 +295,8 @@
 				DEVELOPMENT_TEAM = BYYVCSW9RQ;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_CFBundleDisplayName = "Har包编辑器";
+				INFOPLIST_KEY_NSHumanReadableCopyright = TheLittleBoy;
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -310,7 +322,8 @@
 				DEVELOPMENT_TEAM = BYYVCSW9RQ;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_CFBundleDisplayName = "Har包编辑器";
+				INFOPLIST_KEY_NSHumanReadableCopyright = TheLittleBoy;
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
